@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lan="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>Spending Tracker</title>
+    <link rel="stylesheet" type="text/css" href="/styles/forms.css">
+    <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+    <link rel="stylesheet" type="text/css" href="/styles/tables.css">
+    <link rel="stylesheet" type="text/css" href="/styles/images.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li> <a href="/"><i class="material-icons" style="font-size:25px;color:red">account_balance</i>Spending Tracker</a> </li>
+        <li> <a href="/transactions" style="font-size:25px;">My Transactions</a> </li>
+        <li> <a href="/merchants" style="font-size:25px;">My Merchants</a> </li>
+        <li> <a href="/tags" style="font-size:25px;">My Tags</a> </li>
+        
+      </ul>
+    </nav>
+    <%= yield  %>
+  </body>
+</html>

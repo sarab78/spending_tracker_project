@@ -1,0 +1,16 @@
+form {
+  margin-left: 5%;
+}
+
+
+.submit {
+  background-color: lightgreen;
+  padding: 12px 24px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

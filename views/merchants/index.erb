@@ -1,0 +1,19 @@
+<div class="container">
+
+  <h1>All Merchants</h1>
+
+  <table class="merchant_table">
+    <% for merchant in @merchants %>
+    <tr>
+      <td class="merchant_link"><a href="/merchants/<%=merchant.id %>"><%= merchant.name.capitalize %></a>
+<td><a href="/merchants/<%=merchant.id %>/edit">Edit</a>
+  <td><form action =  "/merchants/<%=merchant.id %>/delete" method = "post">
+    <input type = "submit" value = "delete"/>
+    </form></td>
+      </tr>
+      <% end %>
+    </table>
+
+    <h4> <a href="/merchants/new"> <i class="material-icons">add</i>Add a new merchant</a> </h4>
+
+  </div>

@@ -1,0 +1,20 @@
+<div class="container">
+
+  <h1>All Tags</h1>
+
+  <table class="tag_table">
+    <% for tag in @tags %>
+    <tr>
+  <td class="tag_link"><a href="/tags/<%=tag.id %>"><%= tag.name.capitalize %></a>
+  <td><a href="/tags/<%=tag.id %>/edit">Edit</a>
+  <td><form action =  "/tags/<%=tag.id %>/delete" method = "post">
+  <input type = "submit" value = "delete"/>
+  </form></td>
+    </tr>
+
+      <% end %>
+    </table>
+
+    <h4> <a href="/tag/new"> <i class="material-icons">add</i>Add a new tag</a> </h4>
+
+  </div>

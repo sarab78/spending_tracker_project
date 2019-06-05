@@ -1,0 +1,39 @@
+<div class="container">
+
+<h1>Transactions</h1>
+
+<h2> Total Transactions = <%= @total %> </h2>
+
+<table class ="transaction_table">
+  <tr>
+    <th>Date</th>
+    <th>Merchant</th>
+    <th>Tag</th>
+    <th>Amount</th>
+
+
+  </tr>
+
+  <% for transaction in @transactions %>
+
+
+  <tr>
+    <td><%= transaction.timestamp  %></td>
+    <td><%= transaction.merchant.name %></td>
+    <td><%=transaction.tag.name%></td>
+    <td><%= transaction.amount() %></td>
+    <td><a href="/transactions/<%=transaction.id  %>/edit"> <i class="material-icons" title="Edit">mode_edit</i></a></td>
+    <td><form action="/transactions/<%= transaction.id %>/delete" method="POST">
+        <button type="submit" title="Delete" style="border:none;"<i class="material-icons">delete</i></button>
+      </form></td>
+  </tr>
+  <% end %>
+
+</table>
+
+<!-- <h4> <a href="/tag/new"> <i class="material-icons">add</i>Add a new transaction</a> </h4>
+<form action="/transactions" method="post"> -->
+
+
+
+</div>

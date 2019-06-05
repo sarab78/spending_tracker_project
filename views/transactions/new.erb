@@ -1,0 +1,43 @@
+<div class="container">
+
+<h1>New transaction</h1>
+
+<form action="/transactions" method="post">
+
+  <label>
+  Select a merchant<span class="required">*</span>
+    <select name="merchant_id">
+    <% for merchant in @merchants %>
+    <option value="<%= merchant.id %>"><%= merchant.name %></option>
+    <% end %>
+    </select>
+  </label>
+
+  <br>
+
+  <label>
+    Select a tag<span class="required">*</span>
+    <select name="tag_id">
+    <% for tag in @tags %>
+    <option value="<%= tag.id %>"><%= tag.name %></option>
+    <% end %>
+    </select>
+  </label>
+
+  <br>
+
+  <label for="amount">Amount<span class="required">*</span></label>
+<input id = "amount" type = "number" min = "0" name="amount"/>
+
+  <br>
+
+  <label for="timestamp">Date<span class="required">*</span></label>
+<input id = "timestamp" type = "date" name="timestamp"/>
+
+  <br>
+
+  <input class="submit" type='submit' value="Add transaction">
+
+</form>
+
+</div>

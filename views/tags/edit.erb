@@ -1,0 +1,16 @@
+<div class="container">
+
+<h1>Update Tags</h1>
+
+<form method="post" action="/tags/<%= @tag.id %>">
+  <label for="name">Name:</label>
+    <input id="name" type="text" name="name" value="<%= @tag.name  %>" />
+
+<br>
+
+  <input class="submit" type="submit" value="Update tag" />
+
+
+</form>
+
+</div>
